@@ -1,8 +1,8 @@
 module.exports = {
 
     author: "@konstantinmuenster",
-    siteTitle: "Gatsby Starter Portfolio Minimal",
-    siteShortTitle: "Gatsby", // Used as logo text in header, footer, and splash screen
+    siteTitle: "Alice's Portfolio",
+    siteShortTitle: "Alice", // Used as logo text in header, footer, and splash screen
     siteDescription: "A modern one-page portfolio with a clean yet expressive design.",
     siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
     siteLanguage: "en_US",
@@ -14,40 +14,32 @@ module.exports = {
     // To access your Medium RSS feed, just replace this url with your username: https://medium.com/feed/@{yourname}
     mediumRssFeed: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40konstantin.muenster",
     shownArticles: 3,
-    
+
     // There are icons available for the following platforms: 
     // Medium, GitHub, LinkedIn, XING, Behance
     socialMedia: [
         {
-            name: "Linkedin",
-            url: "https://www.linkedin.com/in/konstantin-muenster/"
+            name: "LinkedIn",
+            url: "https://www.linkedin.com/in/alice-0-kim"
         },
         {
             name: "Medium",
-            url: "https://medium.com/@konstantin.muenster"
+            url: "https://medium.com/@aliceykim0828"
         },
         {
-            name: "Github",
-            url: "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal"
-        },
-        {
-            name: "Behance",
-            url: "https://www.behance.net/konstanmnster"
+            name: "GitHub",
+            url: "https://github.com/alice-0-kim"
         },
     ],
-  
+
     navLinks: {
         menu: [
-            {
-                name: "Articles",
-                url: "/#articles",
-            },
             {
                 name: "About Me",
                 url: "/#about",
             },
             {
-                name: "Features",
+                name: "Projects",
                 url: "/#projects",
             },
         ],
@@ -57,14 +49,5 @@ module.exports = {
         }
     },
 
-    footerLinks: [
-        {
-            name: "Privacy",
-            url: "/privacy"
-        },
-        {
-            name: "Imprint",
-            url: "/imprint"
-        }
-    ]
+    footerLinks: []
 }
