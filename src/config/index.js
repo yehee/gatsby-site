@@ -23,12 +23,12 @@ module.exports = {
             url: "https://www.linkedin.com/in/alice-0-kim"
         },
         {
-            name: "Medium",
-            url: "https://medium.com/@aliceykim0828"
-        },
-        {
             name: "GitHub",
             url: "https://github.com/alice-0-kim"
+        },
+        {
+            name: "Resume",
+            url: "/resume__alice_kim.pdf"
         },
     ],
 

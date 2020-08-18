@@ -112,6 +112,7 @@ const Social = ({ width, padding, fontSize, fontWeight, withIcon }) => (
           padding={padding}
           fontSize={fontSize}
           fontWeight={fontWeight}
+          download
         >
           {withIcon ? <Icon name={name} /> : null} {name}
         </StyledSocialProfile>
