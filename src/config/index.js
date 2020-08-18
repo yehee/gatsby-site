@@ -1,10 +1,9 @@
 module.exports = {
-
-    author: "@konstantinmuenster",
+    author: "@alice-0-kim",
     siteTitle: "Alice's Portfolio",
     siteShortTitle: "Alice", // Used as logo text in header, footer, and splash screen
-    siteDescription: "A modern one-page portfolio with a clean yet expressive design.",
-    siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
+    siteDescription: "Alice's portfolio website.",
+    siteUrl: "https://alice-0-kim.github.io/",
     siteLanguage: "en_US",
     siteIcon: "src/content/favicon.png", // Relative to gatsby-config file
 
