@@ -111,7 +111,6 @@ const StyledProject = styled(motion.div)`
   flex-shrink: 0;
   @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
     margin-top: 2rem;
-    padding-right: 5rem;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     flex-direction: row;
