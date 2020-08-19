@@ -51,7 +51,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
     }
     .projects {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       margin-top: -2.5rem;
       padding: 2.5rem 2.5rem;
       overflow-x: scroll;
@@ -61,7 +61,6 @@ const StyledContentWrapper = styled(ContentWrapper)`
         display: none;
       }
       @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-        flex-direction: column;
         margin-top: 0;
         padding: 0;
         overflow: visible;
@@ -110,22 +109,16 @@ const StyledProject = styled(motion.div)`
   margin-top: 0;
   margin-bottom: 2rem;
   flex-shrink: 0;
-  padding-right: 2.5rem;
-  max-width: 20rem;
   @media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-    max-width: 25rem;
     margin-top: 2rem;
     padding-right: 5rem;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    flex-direction: row;
     justify-content: space-between;
     flex-shrink: 1;
-    max-width: 62.5rem;
     margin-bottom: 10rem;
     padding-right: 0;
-    /* Positioning of image and details should vary */
-    flex-direction: ${({ position }) =>
-    position % 2 !== 0 ? "row" : "row-reverse"};
   }
   .details {
     width: 100%;
