@@ -41,9 +41,10 @@ const StyledContentWrapper = styled(ContentWrapper)`
 `
 
 const StyledInterests = styled.div`
+  width: 100%;
   display: grid;
   grid-auto-flow: row dense;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, calc(100% / 3));
   column-gap: 1rem;
   row-gap: 1rem;
   padding: 0 2.5rem;
@@ -60,11 +61,11 @@ const StyledInterests = styled.div`
     Math.ceil(itemCount / 2) % 2 === 1 ? "17.125rem" : "2.5rem"};
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, calc(100% / 2));
     margin: auto;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: 100%;
     margin: auto;
   }
   /* Show scrollbar if desktop and wrapper width > viewport width */
@@ -88,6 +89,10 @@ const StyledInterests = styled.div`
       background-color: #fff;
       border-radius: 8px;
     }
+  }
+
+  button {
+    width: 100%;
   }
 
   .interest {
