@@ -1,7 +1,7 @@
 module.exports = {
     author: "@alice-0-kim",
     siteTitle: "Alice's Portfolio",
-    siteShortTitle: "Alice", // Used as logo text in header, footer, and splash screen
+    siteShortTitle: "예희", // Used as logo text in header, footer, and splash screen
     siteDescription: "Alice's portfolio website.",
     siteUrl: "https://alice-0-kim.github.io/",
     siteLanguage: "en_US",
