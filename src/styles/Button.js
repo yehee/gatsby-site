@@ -30,7 +30,7 @@ const StyledButton = styled.button`
   }
 `
 
-const Button = ({ onClick, color, textAlign, center, children}) => (
+const Button = ({ onClick, color, textAlign, center, children }) => (
   <StyledButton onClick={onClick} color={color} textAlign={textAlign} center={center}>
     {children}
   </StyledButton>
