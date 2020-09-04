@@ -1,9 +1,9 @@
 module.exports = {
-    author: "@alice-0-kim",
+    author: "@yehee",
     siteTitle: "Alice's Portfolio",
     siteShortTitle: "예희", // Used as logo text in header, footer, and splash screen
     siteDescription: "Alice's portfolio website.",
-    siteUrl: "https://alice-0-kim.github.io/",
+    siteUrl: "https://yehee.github.io/",
     siteLanguage: "en_US",
     siteIcon: "src/content/favicon.png", // Relative to gatsby-config file
 
@@ -19,11 +19,11 @@ module.exports = {
     socialMedia: [
         {
             name: "LinkedIn",
-            url: "https://www.linkedin.com/in/alice-0-kim"
+            url: "https://www.linkedin.com/in/yehee"
         },
         {
             name: "GitHub",
-            url: "https://github.com/alice-0-kim"
+            url: "https://github.com/yehee"
         },
         {
             name: "Resume",
