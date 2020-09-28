@@ -65,20 +65,16 @@ const StyledSocialProfile = styled.a`
   width: ${({ width }) => (width ? width : "auto")};
   height: auto;
   background: ${({ theme }) => theme.colors.background};
-  background: linear-gradient(
-    to right,
-    ${({ theme }) => theme.colors.primary} 50%,
-    ${({ theme }) => theme.colors.background} 50%
-  );
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
   background-size: 205% 100%;
   background-position: right bottom;
   border-radius: ${({ theme }) => theme.borderRadius};
-  border: 0.125rem solid ${({ theme }) => theme.colors.primary};
+  border: 0.125rem solid #ffffff;
   padding: ${({ padding }) => (padding ? padding : ".3rem 1.25rem")};
   transition: all 0.1s ease-out;
   font-size: ${({ fontSize }) => (fontSize ? fontSize : "1rem")};
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.primary};
+  color: #ffffff;
   &:hover {
     background-position: left bottom;
     color: #ffffff;
@@ -92,6 +88,7 @@ const StyledSocialProfile = styled.a`
     width: 1rem;
     margin-right: 0.5rem;
     margin-bottom: -0.05rem;
+    filter: brightness(0) invert(1);
   }
 `
 

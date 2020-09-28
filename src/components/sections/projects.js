@@ -118,6 +118,8 @@ const StyledProject = styled(motion.div)`
     flex-shrink: 1;
     margin-bottom: 10rem;
     padding-right: 0;
+    /* Positioning of image and details should vary */
+    flex-direction: ${({ position }) => (position % 2 !== 0 ? 'row' : 'row-reverse')};
   }
   .details {
     width: 100%;

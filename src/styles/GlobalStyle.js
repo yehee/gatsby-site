@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import modernNormalize from "styled-modern-normalize"
 
 const GlobalStyle = createGlobalStyle`
-    
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
     // Import normalize.css
     ${modernNormalize}
 

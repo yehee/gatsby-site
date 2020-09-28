@@ -1,11 +1,10 @@
 module.exports = {
   colors: {
     primary: "#000000",
-    secondary: "#FB8EA1",
-    tertiary: "#F2F2F2",
+    secondary: "#ffafbd", // "#3fbac2",
+    tertiary: "#f2f2f2",
     text: "#000000",
     background: "#ffffff",
-    nwPlus: "#6ca7ae",
   },
   breakpoints: {
     xs: "480px",
@@ -14,9 +13,9 @@ module.exports = {
     lg: "1200px",
   },
   fonts: {
-    primary: "Roboto, Arial, sans-serif",
+    primary: "Nunito, sans-serif",
   },
-  borderRadius: "1rem",
+  borderRadius: ".5rem",
   pageWidth: "62.5rem",
   headerHeight: "6.25rem",
   footerHeight: "7.5rem",
