@@ -75,11 +75,12 @@ const StyledContentWrapper = styled(ContentWrapper)`
     }
     .card {
       width: 16.25rem;
-      height: 12rem;
+      height: 18rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 1rem;
+      position: relative;
       margin: 2rem 1rem;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
       border-radius: ${({ theme }) => theme.borderRadius};
@@ -92,6 +93,17 @@ const StyledContentWrapper = styled(ContentWrapper)`
       }
       @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
         margin: 2rem auto;
+      }
+      .block {
+        position: absolute;
+        bottom: 2rem;
+      }
+      .thumbnail {
+        border-radius: ${({ theme }) => theme.borderRadius} ${({ theme }) => theme.borderRadius} 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
       }
       .category {
         color: ${({ theme }) => theme.colors.primary};
@@ -120,7 +132,7 @@ const Articles = () => {
   const { isIntroDone } = useContext(Context).state
   const [articles, setArticles] = useState()
   const articlesControls = useAnimation()
-  
+
   // Load and display articles after the splashScreen sequence is done
   useEffect(() => {
     const loadArticles = async () => {
@@ -128,16 +140,16 @@ const Articles = () => {
         await articlesControls.start({ opacity: 1, y: 0, transition: { delay: 1 } })
         // MediumRssFeed is set in config.js
         fetch(mediumRssFeed, { headers: { Accept: "application/json" } })
-        .then(res => res.json())
-        // Feed also contains comments, therefore we filter for articles only
-        .then(data => data.items.filter(item => item.categories.length > 0))
-        .then(newArticles => newArticles.slice(0, MAX_ARTICLES))
-        .then(articles => setArticles(articles))
-        .catch(error => console.log(error))
+          .then(res => res.json())
+          // Feed also contains comments, therefore we filter for articles only
+          .then(data => { console.log(data.items); return data.items.filter(item => item.categories.length > 0) })
+          .then(newArticles => newArticles.slice(0, MAX_ARTICLES))
+          .then(articles => setArticles(articles))
+          .catch(error => console.log(error))
       }
     }
     loadArticles()
-  },[isIntroDone, articlesControls, MAX_ARTICLES])
+  }, [isIntroDone, articlesControls, MAX_ARTICLES])
 
   return (
     <StyledSection
@@ -150,15 +162,17 @@ const Articles = () => {
         <div className="articles">
           {articles
             ? articles.map(item => (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  title={item.title}
-                  aria-label={item.link}
-                  key={item.link}
-                >
-                  <div className="card">
+              <a
+                href={item.link}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                title={item.title}
+                aria-label={item.link}
+                key={item.link}
+              >
+                <div className="card">
+                  <img className="thumbnail" src={item.thumbnail} />
+                  <div className="block">
                     <span className="category">
                       <Underlining color="tertiary" hoverColor="secondary">
                         {item.categories[2]}
@@ -167,23 +181,24 @@ const Articles = () => {
                     <h4 className="title">{item.title}</h4>
                     <span className="date">{parseDate(item.pubDate)}</span>
                   </div>
-                </a>
-              ))
+                </div>
+              </a>
+            ))
             : [...Array(MAX_ARTICLES)].map((i, key) => (
               <div className="card" key={key}>
-                <SkeletonLoader 
+                <SkeletonLoader
                   background="#f2f2f2"
-                  height="1.5rem" 
+                  height="1.5rem"
                   style={{ marginBottom: ".5rem" }}
                 />
-                <SkeletonLoader 
-                  background="#f2f2f2" 
+                <SkeletonLoader
+                  background="#f2f2f2"
                   height="4rem"
                 />
-                <SkeletonLoader 
-                  background="#f2f2f2" 
-                  height=".75rem" 
-                  width="50%" 
+                <SkeletonLoader
+                  background="#f2f2f2"
+                  height=".75rem"
+                  width="50%"
                   style={{ marginTop: ".5rem" }}
                 />
               </div>
