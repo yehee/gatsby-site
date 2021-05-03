@@ -24,12 +24,9 @@ const StyledContentWrapper = styled(ContentWrapper)`
     align-items: center;
     .footer-links {
       /* Adjust width of links wrapper accordingly */
-      width: 10rem;
+      width: 20rem;
       display: flex;
       justify-content: space-between;
-      @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        width: 15rem;
-      }
     }
   }
 `

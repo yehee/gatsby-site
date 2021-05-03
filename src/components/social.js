@@ -47,7 +47,7 @@ const StyledSocialWrapper = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-      background-color: #fff;
+      background-color: #fcfaf8;
       border-radius: 8px;
     }
   }
@@ -64,8 +64,7 @@ const StyledSocialWrapper = styled.div`
 const StyledSocialProfile = styled.a`
   width: ${({ width }) => (width ? width : "auto")};
   height: auto;
-  background: ${({ theme }) => theme.colors.background};
-  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  background: ${({ theme }) => theme.colors.highlight};
   background-size: 205% 100%;
   background-position: right bottom;
   border-radius: ${({ theme }) => theme.borderRadius};

@@ -83,7 +83,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
         }
 
         &::-webkit-scrollbar-track {
-          background-color: #fff;
+          background-color: #fcfaf8;
           border-radius: 8px;
         }
       }

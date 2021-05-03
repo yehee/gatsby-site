@@ -59,7 +59,7 @@ Behance.propTypes = {
 }
 
 Behance.defaultProps = {
-  color: "#000000",
+  color: "#000",
 }
 
 export default Behance

@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import modernNormalize from "styled-modern-normalize"
 
 const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
     // Import normalize.css
     ${modernNormalize}
 
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         margin: 0;
         padding: 0;
-        background-color: #ffffff;
+        background-color: ${({ theme }) => theme.colors.background};
         color: ${({ theme }) => theme.colors.text};
         font-size: 1rem;
         font-family: ${({ theme }) => theme.fonts.primary};

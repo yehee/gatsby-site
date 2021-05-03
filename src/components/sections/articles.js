@@ -68,14 +68,14 @@ const StyledContentWrapper = styled(ContentWrapper)`
         }
 
         &::-webkit-scrollbar-track {
-          background-color: #fff;
+          background-color: #fcfaf8;
           border-radius: 8px;
         }
       }
     }
     .card {
       width: 16.25rem;
-      height: 18rem;
+      height: 17rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -96,7 +96,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
       }
       .block {
         position: absolute;
-        bottom: 2rem;
+        top: 10.5rem;
       }
       .thumbnail {
         border-radius: ${({ theme }) => theme.borderRadius} ${({ theme }) => theme.borderRadius} 0 0;
@@ -104,6 +104,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
         top: 0;
         left: 0;
         width: 100%;
+        height: 10rem;
       }
       .category {
         color: ${({ theme }) => theme.colors.primary};
@@ -173,11 +174,11 @@ const Articles = () => {
                 <div className="card">
                   <img className="thumbnail" src={item.thumbnail} />
                   <div className="block">
-                    <span className="category">
+                    {/* <span className="category">
                       <Underlining color="tertiary" hoverColor="secondary">
                         {item.categories[2]}
                       </Underlining>
-                    </span>
+                    </span> */}
                     <h4 className="title">{item.title}</h4>
                     <span className="date">{parseDate(item.pubDate)}</span>
                   </div>

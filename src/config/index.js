@@ -56,5 +56,18 @@ module.exports = {
         }
     },
 
-    footerLinks: []
+    footerLinks: [
+        {
+            name: "Articles",
+            url: "/#articles",
+        },
+        {
+            name: "About Me",
+            url: "/#about",
+        },
+        {
+            name: "Projects",
+            url: "/#projects",
+        },
+    ]
 }

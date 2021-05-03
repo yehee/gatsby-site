@@ -5,8 +5,7 @@ import styled from "styled-components"
 const StyledButton = styled.button`
   width: 15.625rem;
   height: 3rem;
-  background: ${({ theme }) => theme.colors.background};
-  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  background: ${({ theme }) => theme.colors.highlight};
   color: #ffffff;
   padding: 1rem;
   margin: 0 ${({ center }) => center ? "auto" : "0"};
