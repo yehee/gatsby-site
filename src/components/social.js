@@ -47,7 +47,7 @@ const StyledSocialWrapper = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-      background-color: #fcfaf8;
+      background-color: ${({ theme }) => theme.colors.background};
       border-radius: 8px;
     }
   }
@@ -57,6 +57,10 @@ const StyledSocialWrapper = styled.div`
     margin-bottom: 0.75rem;
     @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
       margin-right: 1rem;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+      width: 100%;
+      text-align: center;
     }
   }
 `
@@ -68,12 +72,11 @@ const StyledSocialProfile = styled.a`
   background-size: 205% 100%;
   background-position: right bottom;
   border-radius: ${({ theme }) => theme.borderRadius};
-  border: 0.125rem solid #ffffff;
   padding: ${({ padding }) => (padding ? padding : ".3rem 1.25rem")};
-  transition: all 0.1s ease-out;
+  transition: all 0.3s ease-out;
   font-size: ${({ fontSize }) => (fontSize ? fontSize : "1rem")};
   font-weight: 500;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.buttonText};
   &:hover {
     background-position: left bottom;
     color: #ffffff;

@@ -86,7 +86,7 @@ const StyledInterests = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-      background-color: #fcfaf8;
+      background-color: ${({ theme }) => theme.colors.background};
       border-radius: 8px;
     }
   }

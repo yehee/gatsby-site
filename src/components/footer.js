@@ -28,6 +28,26 @@ const StyledContentWrapper = styled(ContentWrapper)`
       display: flex;
       justify-content: space-between;
     }
+    @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+`
+
+const Credit = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+  color: #ffffff;
+  font-size: 14px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  a {
+    color: ${({ theme }) => theme.colors.buttonText};
+    padding: 0 .25rem;
+    &:hover {
+      color: #ffffff;
+    }
   }
 `
 
@@ -51,6 +71,16 @@ const Footer = () => (
         ))}
       </div>
     </StyledContentWrapper>
+    <Credit>
+      Created with
+      <Link to="https://www.gatsbyjs.com/" aria-label="Gatsby">
+        Gatsby
+      </Link>
+      | Built and published by
+      <Link to="https://www.konstantin.digital/" aria-label="author">
+        Konstantin Münster
+      </Link>
+    </Credit>
   </StyledFooter>
 )
 

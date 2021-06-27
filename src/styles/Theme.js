@@ -1,11 +1,12 @@
 module.exports = {
   colors: {
     primary: "#000",
-    secondary: "#ff839f", // pink
+    secondary: "#837DFF", // highlight
     tertiary: "#f2f2f2",
     text: "#000",
-    background: "#fcfaf8", // ivory white
-    highlight: "#6d48f6", // purple
+    background: "#F5F5F5",
+    buttonText: "#FFD581",
+    highlight: "#6927FF", // button
   },
   breakpoints: {
     xs: "480px",
